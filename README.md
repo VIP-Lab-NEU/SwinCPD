@@ -12,7 +12,7 @@ Color-Polarization Filter Array (CPFA) sensors provide a single-snapshot solutio
 
 ## Introduction
 
-Please refer to [Introduction.md](Introduction.md) for a brief overview of our network design logic.
+Please refer to [Introduction.md](Introduction.md) for a brief overview.
 
 ---
 
