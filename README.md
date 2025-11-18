@@ -83,6 +83,4 @@ Additionally, SwinCPD is built upon the **Swin Transformer** architecture. We gr
 
 If you find SwinCPD helpful to your research, please cite:
 
-SwinCPD: A Swin Transformer-Based Network for Color-Polarization Demosaicing
-
-DOI:10.1109/JSEN.2025.3630744
+T. Wang, X. Zhang, J. Li, Y. Zheng, J. Ru, and H. Xu, “SwinCPD: A Swin Transformer-Based Network for Color-Polarization Demosaicing,” IEEE Sensors Journal, doi: 10.1109/JSEN.2025.3630744.
