@@ -88,9 +88,9 @@ Attempting to denoise the AoLP image directly is ineffective due to the phase wr
 **Usage Instructions:**
 The source code is in the `AoLP Denoising` folder. First, select the script corresponding to your dataset's bit depth (**8-bit** or **16-bit**).
 
-For 8-bit datasets, run `Calculate_Stokes_8bit` to generate the S0 S1 S2 P1 P2 images required for the denoising process, then run `Denoise_8bit` to generate the denoised AoLP image.
+For 8-bit datasets, run `Calculate_Stokes_8bit.py` to generate the S0 S1 S2 P1 P2 images required for the denoising process, then run `Denoise_8bit.py` to generate the denoised AoLP image.
 
-For 16-bit datasets, run `Calculate_Stokes_16bit` to generate the S0 S1 S2 P1 P2 images required for the denoising process, then run `Denoise_16bit` to generate the denoised AoLP image.
+For 16-bit datasets, run `Calculate_Stokes_16bit.py` to generate the S0 S1 S2 P1 P2 images required for the denoising process, then run `Denoise_16bit.py` to generate the denoised AoLP image.
 
 ---
 
