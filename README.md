@@ -1,22 +1,22 @@
-# SwinCPD: A Swin Transformer-Based Network for Color-Polarization Demosaicing
+# 🌟 SwinCPD: A Swin Transformer-Based Network for Color-Polarization Demosaicing
 
 This repository contains the source code of our paper **"SwinCPD: A Swin Transformer-Based Network for Color-Polarization Demosaicing"**.
 
 ---
 
-## Abstract
+## 📖 Abstract
 
 Color-Polarization Filter Array (CPFA) sensors provide a single-snapshot solution for simultaneously capturing color and polarization information. However, the resulting raw mosaic makes the demosaicing process a significant challenge, as the CPFA sensor samples the color and polarization information of scenes very sparsely. Existing methods struggle with this task and often result in insufficient accuracy and high computational complexity. In this paper, a novel approach for color-polarization demosaicing is proposed. First, the demosaicing problem is reframed as a full-resolution, 12-channel image restoration task by generating a dense input via nearest-neighbor interpolation, which preserves spatial integrity and produces predictable, block-like artifacts ideal for network-based correction. Second, we propose a Swin Transformer-based network for color-polarization demosaicing (SwinCPD). The input data are processed in four parallel streams corresponding to each polarization angle. A dynamic Feature-wise Linear Modulation (FiLM) mechanism is employed to intelligently model the complex inter-polarization correlations. Extensive experiments on public datasets demonstrate that the proposed method significantly outperforms state-of-the-art techniques, improving the Peak Signal-to-Noise Ratio (PSNR) by up to 2.0 dB and reducing the Angle of Linear Polarization (AoLP) error by nearly 2 degrees.
 
 ---
 
-## Introduction
+## 🧩 Introduction
 
 Please refer to [Introduction.md](Introduction.md) for a brief overview.
 
 ---
 
-## Requirements
+## 🛠️ Requirements
 
 | Component   | Minimum Version/Amount         |
 |-------------|--------------------------------|
@@ -26,7 +26,7 @@ Please refer to [Introduction.md](Introduction.md) for a brief overview.
 
 ---
 
-## Datasets
+## 📂 Datasets
 
 We have reorganized the original datasets to align with SwinCPD's training and testing pipeline. Rearranged versions of four existing high-quality datasets are available via the following links:
 
@@ -50,13 +50,13 @@ Dataset/
 
 ---
 
-## Training and Testing
+## 🔬 Training and Testing
 
 After organizing the dataset in the required structure, execute `Preprocessing.py` to generate SwinCPD input images. Next, run `Train.py` to train the model. Finally, use `Test.py` to evaluate the trained model.
 
 ---
 
-## Original Dataset Sources
+## 💾 Original Dataset Sources
 - [**Qiu's Dataset**](https://github.com/qsimeng/Polarization-Demosaic-Code) (8-bit PNG)  
 
 - [**Wen's Dataset**](https://github.com/wsj890411/CPDNet) (8-bit PNG)  
@@ -69,7 +69,7 @@ After organizing the dataset in the required structure, execute `Preprocessing.p
 
 ---
 
-## Update: A Specialized Denoising Tool for Computational Noise in AoLP Images
+## 🧹 Update: A Specialized Denoising Tool for Computational Noise in AoLP Images
 
 We have developed a post-processing algorithm specifically designed to mitigate the severe computational noise often observed in Angle of Linear Polarization (AoLP) images. Unlike standard sensor noise, this artifact is a byproduct of the mathematical instability inherent in polarization calculations, particularly in regions with a low Degree of Linear Polarization (DoLP).
 
@@ -94,7 +94,7 @@ For 16-bit datasets, run `Calculate_Stokes_16bit` to generate the S0 S1 S2 P1 P2
 
 ---
 
-## Acknowledgements
+## 🤝 Acknowledgements
 
 We sincerely thank the authors of the works mentioned above for providing high-quality color-polarization datasets that enabled research in this field.
 
@@ -104,7 +104,7 @@ Additionally, SwinCPD is built upon the **Swin Transformer** architecture. We gr
 
 ---
 
-## Citation
+## 📚 Citation
 
 If you find SwinCPD helpful to your research, please cite:
 
