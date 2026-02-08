@@ -69,6 +69,31 @@ After organizing the dataset in the required structure, execute `Preprocessing.p
 
 ---
 
+## Update: A Specialized Denoising Tool for Computational Noise in AoLP Images
+
+We have developed a post-processing algorithm specifically designed to mitigate the severe computational noise often observed in Angle of Linear Polarization (AoLP) images. Unlike standard sensor noise, this artifact is a byproduct of the mathematical instability inherent in polarization calculations, particularly in regions with a low Degree of Linear Polarization (DoLP).
+
+**The Challenge: Instability in Low-DoLP Regions**
+
+The AoLP is derived using the formula 0.5*arctan(S2/S1). In unpolarized or weakly polarized regions (low DoLP), the values of the Stokes parameters S1 and S2 are both close to zero. Consequently, the ratio S2/S1 becomes mathematically unstable, fluctuating wildly between extremely large positive and negative values. This instability manifests visually as chaotic white and black dots that significantly degrades image interpretability, even if the original sensor noise was minimal.
+
+**Our Solution: Denoising Normalized Stokes Precursors**
+
+Attempting to denoise the AoLP image directly is ineffective due to the phase wrapping property of angles (where -π/2 and π/2 represent the same physical orientation but opposite pixel values). Standard denoisers often blur it, creating artifacts. Instead, our approach targets the **Normalized Stokes Parameters**. The process is as follows:
+
+1.  **Normalization:** We first calculate the normalized parameters P1 = S1/S0 and P2 = S2/S0.
+2.  **Denoising:** We apply the **BM3D** (Block-Matching and 3D Filtering) algorithm separately to P1 and P2.
+3.  **Reconstruction:** The final clean AoLP image is recalculated using the denoised P1 and P2 components.
+
+**Usage Instructions:**
+The source code is in the `AoLP Denoising` folder. First, select the script corresponding to your dataset's bit depth (**8-bit** or **16-bit**).
+
+For 8-bit datasets, run `Calculate_Stokes_8bit` to generate the S0 S1 S2 P1 P2 images required for the denoising process, then run `Denoise_8bit` to generate the denoised AoLP image.
+
+For 16-bit datasets, run `Calculate_Stokes_16bit` to generate the S0 S1 S2 P1 P2 images required for the denoising process, then run `Denoise_16bit` to generate the denoised AoLP image.
+
+---
+
 ## Acknowledgements
 
 We sincerely thank the authors of the works mentioned above for providing high-quality color-polarization datasets that enabled research in this field.
