@@ -34,6 +34,7 @@ We have reorganized the original datasets to align with SwinCPD's training and t
 🔗 **[OneDrive](https://1drv.ms/u/c/cc548fe0a93a23b3/EVci7642W_hAhsR_MBtxQIcBWv_o4lSVCLBqln8vW2Zq8A?e=YFea1c)**
 
 > **Note**: Our code supports both **8-bit** and **16-bit** images. The bit depth of the dataset **must match** the version of the code you are using.
+
 > **The datasets provided here already contain synthesized raw images. If you are using your own synthesized raw images, please modify the sensor layout in Preprocessing.py to match the sensor layout you used when synthesizing the raw images.**
 
 ### Required Dataset Structure
