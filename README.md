@@ -18,7 +18,7 @@ Please refer to [Introduction.md](Introduction.md) for a brief overview.
 
 ## 🛠️ Requirements
 
-| Component   | Minimum Version/Amount         |
+| Component   | Required Version/Amount         |
 |-------------|--------------------------------|
 | PyTorch     | 2.0.0 or later                 |
 | CUDA        | 11.8 or later                  |
@@ -35,7 +35,7 @@ We have reorganized the original datasets to align with SwinCPD's training and t
 
 > **Note**: Our code supports both **8-bit** and **16-bit** images. The bit depth of the dataset **must match** the version of the code you are using.
 
-> **The datasets provided here already contain synthesized raw images. If you are using your own synthesized raw images, please modify the sensor layout in `Preprocessing.py` to match the sensor layout you used when synthesizing the raw images.**
+> **⚠️ The datasets provided here already contain synthesized raw images. If you are using your own synthesized raw images, please modify the sensor layout in `Preprocessing.py` to match the sensor layout you used when synthesizing the raw images.**
 
 ### Required Dataset Structure
 ```
@@ -48,6 +48,7 @@ Dataset/
 │   └── ...
 └── Test/
     └── ...
+
 Preprocessing.py
 SwinCPD_Model.py
 Test.py
