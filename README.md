@@ -59,7 +59,7 @@ Train.py
 
 ## 🔬 Training and Testing
 
-After organizing the dataset in the required structure, execute `Preprocessing.py` to generate SwinCPD input images. Next, run `Train.py` to train the model. Finally, use `Test.py` to evaluate the trained model.
+After organizing the dataset in the required structure, run `Preprocessing.py` to generate the input images for training. Next, run `Train.py` to train the model. Finally, run `Test.py` to test the model.
 
 ---
 
