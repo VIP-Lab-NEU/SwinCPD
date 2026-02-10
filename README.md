@@ -98,7 +98,7 @@ For 8-bit datasets, run `Calculate_Stokes_8bit.py` to generate the S0 S1 S2 P1 P
 
 For 16-bit datasets, run `Calculate_Stokes_16bit.py` to generate the S0 S1 S2 P1 P2 images required for the denoising process, then run `Denoise_16bit.py` to generate the denoised AoLP image.
 
-**Optional**
+**🟦 Optional**
 1.  **Denoising DoLP:** DoLP is calculated as sqrt(S1^2+S2^2)/S0, which equals to sqrt(P1^2+P2^2). We also save the DoLP calculated by the denoised P1 and P2. The denoised DoLP has better perceptual quality.
 2.  **Enhancing DoLP Contrast:** We can notice that the DoLP calculated from demosaiced images appears "darker" or more washed out than the Ground Truth. This occurs because deep learning models tend to output smoothed predictions in uncertain areas to minimize error. This smoothing effect dampens the amplitude of the polarization signals, acting as a low-pass filter that reduces the distinction between polarization angles. Since DoLP is calculated as the magnitude of these signals, over-smoothing mathematically lowers the final DoLP values. To restore this lost signal, we apply an **unsharp masking** operation to the denoised P1 and P2 maps. This boosts the high-frequency details and signal amplitude that the network may have attenuated, resulting in a brighter DoLP image with clearer textures and more accurate polarization contrast. This can increase the PSNR of DoLP by about 0.1-0.3 dB.
 
